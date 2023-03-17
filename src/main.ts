@@ -12,6 +12,15 @@ const i18n = castToVueI18n(
       silentTranslationWarn: true,
       legacy: true,
       allowComposition: true,
+      globalInjection: true,
+      messages: {
+        en: {
+          globalhi: "This is global Hello",
+        },
+        ja: {
+          globalhi: "こんにちはグローバル",
+        },
+      },
     },
     VueI18n
   )
