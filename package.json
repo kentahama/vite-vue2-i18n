@@ -1,0 +1,25 @@
+{
+  "name": "vite-vue2-i18n",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check build-only",
+    "preview": "vite preview",
+    "test:unit": "vitest --environment jsdom --root src/",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+  },
+  "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.9.2",
+    "vue": "^2.7.14",
+    "vue-i18n": "^8.28.2",
+    "vue-i18n-bridge": "^9.2.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.0"
+  }
+}
