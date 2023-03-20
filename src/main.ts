@@ -1,31 +1,21 @@
 import Vue from "vue";
 import App from "@/App.vue";
-import { castToVueI18n, createI18n } from "vue-i18n-bridge";
 import VueI18n from "vue-i18n";
 
-Vue.use(VueI18n, { bridge: true });
-const i18n = castToVueI18n(
-  createI18n(
-    {
-      locale: "ja",
-      fallbackLocale: "en",
-      silentTranslationWarn: true,
-      legacy: true,
-      allowComposition: true,
-      globalInjection: true,
-      messages: {
-        en: {
-          globalhi: "This is global Hello",
-        },
-        ja: {
-          globalhi: "こんにちはグローバル",
-        },
-      },
+Vue.use(VueI18n);
+const i18n = new VueI18n({
+  locale: "ja",
+  fallbackLocale: "en",
+  silentTranslationWarn: true,
+  messages: {
+    en: {
+      globalhi: "This is global Hello",
     },
-    VueI18n
-  )
-);
-Vue.use(i18n);
+    ja: {
+      globalhi: "こんにちはグローバル",
+    },
+  },
+});
 
 new Vue({
   i18n,
